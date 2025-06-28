@@ -1,0 +1,13 @@
+---
+# tasks file for myrole
+
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Print a hello message
+  debug:
+    msg: "Nginx installed successfully on {{inventory_hostname }}"
+

@@ -1,0 +1,6 @@
+- name: Run my Ansible role testing
+  hosts: local
+  become: true
+  roles:
+    - myrole
+    
